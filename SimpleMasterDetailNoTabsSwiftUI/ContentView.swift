@@ -11,27 +11,33 @@ import SwiftUI
 struct ContentView: View {
         var body: some View {
             
-            let resorts = createResortList(num: 10)
-            
-            return List(resorts) { resort in
-                NavigationLink(destination: ResortView(resort: resort)) {
-                    Image("HuckALaHuckMedium")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 40, height: 25)
-                    .clipShape(RoundedRectangle(cornerRadius: 5))
-                    .overlay(RoundedRectangle(cornerRadius: 5)
-                        .stroke(Color.black, lineWidth:  1))
-                    VStack(alignment: .leading) {
-                        Text(resort.name)
-                            .font(.headline)
-                        Text("\(resort.runs) runs")
-                            .foregroundColor(.secondary)
-                    }
-                }
-            }
+//            let resorts = createResortList(num: 10)
+//
+//            return NavigationView {
+//            List(resorts) { resort in
+//                NavigationLink(destination: ResortView(resort: resort)) {
+//                    Image("HuckALaHuckMedium")
+//                    .resizable()
+//                    .scaledToFit()
+//                    .frame(width: 40, height: 25)
+//                    .clipShape(RoundedRectangle(cornerRadius: 5))
+//                    .overlay(RoundedRectangle(cornerRadius: 5)
+//                        .stroke(Color.black, lineWidth:  1))
+//                    VStack(alignment: .leading) {
+//                        Text(resort.name)
+//                            .font(.headline)
+//                        Text("\(resort.runs) runs")
+//                            .foregroundColor(.secondary)
+//                    }
+//                }
+//
+//            }
+            NavigationView {
+            ResortList()
+            WelcomeView()
             .navigationBarTitle("Resorts")
-
+            }
+    //}
 
         }
         
