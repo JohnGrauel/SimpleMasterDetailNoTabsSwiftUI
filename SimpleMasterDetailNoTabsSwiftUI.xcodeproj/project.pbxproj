@@ -22,7 +22,6 @@
 		D5704A1423E65E9F00F7AF11 /* ResortView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5704A1323E65E9F00F7AF11 /* ResortView.swift */; };
 		D5704A1623E65EDA00F7AF11 /* SkiDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5704A1523E65EDA00F7AF11 /* SkiDetailsView.swift */; };
 		D5704A1823E65F2000F7AF11 /* ResortDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5704A1723E65F2000F7AF11 /* ResortDetailsView.swift */; };
-		D5704A1A23E6612C00F7AF11 /* ResortList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5704A1923E6612C00F7AF11 /* ResortList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,7 +42,6 @@
 		D5704A1323E65E9F00F7AF11 /* ResortView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResortView.swift; sourceTree = "<group>"; };
 		D5704A1523E65EDA00F7AF11 /* SkiDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkiDetailsView.swift; sourceTree = "<group>"; };
 		D5704A1723E65F2000F7AF11 /* ResortDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResortDetailsView.swift; sourceTree = "<group>"; };
-		D5704A1923E6612C00F7AF11 /* ResortList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResortList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +80,6 @@
 				D55F29EA24298CC200E92001 /* AppRootView.swift */,
 				D57049FC23E65D7700F7AF11 /* ContentView.swift */,
 				D5704A0C23E65DCE00F7AF11 /* WelcomeView.swift */,
-				D5704A1923E6612C00F7AF11 /* ResortList.swift */,
 				D55F29E82429851A00E92001 /* ResortStore.swift */,
 				D562A6552409F6FA00886222 /* AddNewResort.swift */,
 				D57049FE23E65D7800F7AF11 /* Assets.xcassets */,
@@ -184,7 +181,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5704A1A23E6612C00F7AF11 /* ResortList.swift in Sources */,
 				D57049F923E65D7700F7AF11 /* AppDelegate.swift in Sources */,
 				D57049FB23E65D7700F7AF11 /* SceneDelegate.swift in Sources */,
 				D57049FD23E65D7700F7AF11 /* ContentView.swift in Sources */,

@@ -24,13 +24,20 @@ class ResortStore: ObservableObject, Identifiable {
         for r in 0...num {
             
             let facilities = ["Pool", "Steam Room", "Ski Heaters"]
-            let newResort = Resort(id: String(r), name: "Name" + String(r), country: "Country" + String(r), description: "Description" + String(r), imageCredit: "imagecredit" + String(r), price: Int.random(in: 1...3), size: Int.random(in: 1...3), snowDepth: r, elevation: r, runs: r, facilities: facilities)
+            let newResort = Resort(id: UUID(), name: "Name" + String(r), country: "Country" + String(r), description: "Description" + String(r), imageCredit: "imagecredit" + String(r), price: Int.random(in: 1...3), size: Int.random(in: 1...3), snowDepth: r, elevation: r, runs: r, facilities: facilities)
             
             localResorts.append(newResort)
             
         }
         self.resorts = localResorts
     }
+    
+    
+    func getJSONResorts() {
+        
+        
+    }
+    
 }
 
 

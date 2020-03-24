@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct Resort: Codable, Identifiable {
-    let id: String
+    let id: UUID
     let name: String
     let country: String
     let description: String
