@@ -30,7 +30,6 @@ struct AddNewResort: View {
                 TextField("Enter a price", text: $resortPriceString)
                 TextField("Enter a size", text: $resortSizeString)
             }
-            
             .textFieldStyle(RoundedBorderTextFieldStyle())
             .padding(EdgeInsets(top: 20, leading: 30, bottom: 20, trailing: 30))
             

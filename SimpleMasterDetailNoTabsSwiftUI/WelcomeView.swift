@@ -21,11 +21,11 @@ struct WelcomeView: View {
             Text("Please select a resort from the left-hand slide in menu")
                 .foregroundColor(.secondary)
             
-            Button(action: {
-                self.presentationMode.wrappedValue.dismiss()
-            }) {
-                Text("Dismiss")
-            }
+//            Button(action: {
+//                self.presentationMode.wrappedValue.dismiss()
+//            }) {
+//                Text("Dismiss")
+//            }
         }
 
         .navigationBarTitle(Text("Notifications"), displayMode: .inline)

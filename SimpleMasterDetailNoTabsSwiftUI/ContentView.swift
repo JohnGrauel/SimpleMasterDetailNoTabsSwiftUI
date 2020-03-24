@@ -12,6 +12,11 @@ struct ContentView: View {
     
     @ObservedObject var resortStore = ResortStore()
     @State private var addNewResort = false
+    @State private var coverDeletedDetail = false
+    
+    @Environment(\.presentationMode) var presentationMode
+    
+    
     
     var body: some View {
 
@@ -38,8 +43,29 @@ struct ContentView: View {
             }
             .onDelete { indexSet in
                 self.removeItems(at: [indexSet.first!])
+                self.coverDeletedDetail.toggle()
+                //self.coverDeletedDetail = true
             }
-        }
+
+/*
+             enum Orientation {
+                 case portrait
+                 case landscape
+             }
+             
+             if UIDevice.current.orientation.isLandscape {
+                 self.orientation = .landscape
+             }
+*/
+            
+            
+            if UIDevice.current.userInterfaceIdiom == .pad {
+                NavigationLink(destination: WelcomeView(), isActive: self.$coverDeletedDetail) {
+                    Text("")
+                }
+            }
+            
+        }//list
         .navigationBarTitle("Resorts")
         .navigationBarItems(leading:
             Button(action: {
@@ -51,7 +77,8 @@ struct ContentView: View {
                 AddNewResort(resortStore: self.resortStore)
             }
             ,
-            trailing: EditButton())
+            trailing: EditButton()
+            )
 
     }//body
      
@@ -64,5 +91,15 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+    }
+}
+
+extension View {
+    func phoneOnlyStackNavigationView() -> some View {
+        if UIDevice.current.userInterfaceIdiom == .phone {
+            return AnyView(self.navigationViewStyle(StackNavigationViewStyle()))
+        } else {
+            return AnyView(self)
+        }
     }
 }
