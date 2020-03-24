@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D55F29E92429851A00E92001 /* ResortStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55F29E82429851A00E92001 /* ResortStore.swift */; };
+		D55F29EB24298CC200E92001 /* AppRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55F29EA24298CC200E92001 /* AppRootView.swift */; };
+		D562A6562409F6FA00886222 /* AddNewResort.swift in Sources */ = {isa = PBXBuildFile; fileRef = D562A6552409F6FA00886222 /* AddNewResort.swift */; };
 		D57049F923E65D7700F7AF11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57049F823E65D7700F7AF11 /* AppDelegate.swift */; };
 		D57049FB23E65D7700F7AF11 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57049FA23E65D7700F7AF11 /* SceneDelegate.swift */; };
 		D57049FD23E65D7700F7AF11 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57049FC23E65D7700F7AF11 /* ContentView.swift */; };
@@ -23,6 +26,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D55F29E82429851A00E92001 /* ResortStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResortStore.swift; sourceTree = "<group>"; };
+		D55F29EA24298CC200E92001 /* AppRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRootView.swift; sourceTree = "<group>"; };
+		D562A6552409F6FA00886222 /* AddNewResort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewResort.swift; sourceTree = "<group>"; };
 		D57049F523E65D7700F7AF11 /* SimpleMasterDetailNoTabsSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleMasterDetailNoTabsSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D57049F823E65D7700F7AF11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D57049FA23E65D7700F7AF11 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,9 +79,12 @@
 			children = (
 				D57049F823E65D7700F7AF11 /* AppDelegate.swift */,
 				D57049FA23E65D7700F7AF11 /* SceneDelegate.swift */,
+				D55F29EA24298CC200E92001 /* AppRootView.swift */,
 				D57049FC23E65D7700F7AF11 /* ContentView.swift */,
 				D5704A0C23E65DCE00F7AF11 /* WelcomeView.swift */,
 				D5704A1923E6612C00F7AF11 /* ResortList.swift */,
+				D55F29E82429851A00E92001 /* ResortStore.swift */,
+				D562A6552409F6FA00886222 /* AddNewResort.swift */,
 				D57049FE23E65D7800F7AF11 /* Assets.xcassets */,
 				D5704A0323E65D7800F7AF11 /* LaunchScreen.storyboard */,
 				D5704A0623E65D7800F7AF11 /* Info.plist */,
@@ -179,10 +188,13 @@
 				D57049F923E65D7700F7AF11 /* AppDelegate.swift in Sources */,
 				D57049FB23E65D7700F7AF11 /* SceneDelegate.swift in Sources */,
 				D57049FD23E65D7700F7AF11 /* ContentView.swift in Sources */,
+				D55F29E92429851A00E92001 /* ResortStore.swift in Sources */,
 				D5704A1423E65E9F00F7AF11 /* ResortView.swift in Sources */,
 				D5704A1023E65DFE00F7AF11 /* Utilities.swift in Sources */,
 				D5704A1223E65E2F00F7AF11 /* Resort.swift in Sources */,
 				D5704A1823E65F2000F7AF11 /* ResortDetailsView.swift in Sources */,
+				D55F29EB24298CC200E92001 /* AppRootView.swift in Sources */,
+				D562A6562409F6FA00886222 /* AddNewResort.swift in Sources */,
 				D5704A0D23E65DCE00F7AF11 /* WelcomeView.swift in Sources */,
 				D5704A1623E65EDA00F7AF11 /* SkiDetailsView.swift in Sources */,
 			);

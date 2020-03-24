@@ -13,37 +13,42 @@ struct ResortView: View {
     let resort: Resort
     
     var body: some View {
-        ScrollView {
-            VStack(alignment: .center, spacing: 0) {
-                Image("HuckALaHuckMedium")
-                //Image(decorative: resort.id)
-                    .resizable()
-                    .frame(width: 200, height: 200)
-                    .scaledToFit()
-                
-                Group {
-                    Text(resort.description)
-                        .padding(.vertical)
-                    
-                    HStack {
-                        Spacer()
-                        ResortDetailsView(resort: resort)
-                        SkiDetailsView(resort: resort)
-                        Spacer()
-                    }
-                    .font(.headline)
-                    .foregroundColor(.secondary)
-                    .padding(.top)
+        GeometryReader { geo in
+            ScrollView {
+                VStack(alignment: .center, spacing: 0) {
+                    Image("HuckALaHuckMedium")
+                        .resizable()
+                        
+                        .frame(width: (geo.size.width < geo.size.height) ? (geo.size.width - 35) : geo.size.height - 35,
+                               height: (geo.size.width < geo.size.height) ? (geo.size.width - 35) : geo.size.height - 35, alignment: .center)
 
-                    Text(ListFormatter.localizedString(byJoining: resort.facilities))
-                        .padding(.vertical)
+                        //.frame(width: geo.size.width - 35, height: geo.size.width - 35)
+                        .scaledToFit()
+                    
+                    Group {
+                        Text(self.resort.description)
+                            .padding(.vertical)
+                        
+                        HStack {
+                            Spacer()
+                            ResortDetailsView(resort: self.resort)
+                            SkiDetailsView(resort: self.resort)
+                            Spacer()
+                        }
                         .font(.headline)
-                    Text(resort.facilities.joined(separator: ", "))
-                        .padding(.vertical)
-                }
-                .padding(.horizontal)
-            }//vstack
-        }//scrollview
+                        .foregroundColor(.secondary)
+                        .padding(.top)
+                        
+                        Text(ListFormatter.localizedString(byJoining: self.resort.facilities))
+                            .padding(.vertical)
+                            .font(.headline)
+                        Text(self.resort.facilities.joined(separator: ", "))
+                            .padding(.vertical)
+                    }
+                    .padding(.horizontal)
+                }//vstack
+            }//scrollview
+        }//geo
             .navigationBarTitle(Text("\(resort.name), \(resort.country)"), displayMode: .inline)
     }
 }

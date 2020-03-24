@@ -11,14 +11,25 @@ import SwiftUI
 
 struct WelcomeView: View {
     
+    @Environment(\.presentationMode) var presentationMode
+    
     var body: some View {
         
-        VStack{
+        VStack {
             Text("Welcome to the Split Controller in SwiftUI")
                 .font(.largeTitle)
             Text("Please select a resort from the left-hand slide in menu")
                 .foregroundColor(.secondary)
+            
+            Button(action: {
+                self.presentationMode.wrappedValue.dismiss()
+            }) {
+                Text("Dismiss")
+            }
         }
-  
+
+        .navigationBarTitle(Text("Notifications"), displayMode: .inline)
+
+        
     }
 }
