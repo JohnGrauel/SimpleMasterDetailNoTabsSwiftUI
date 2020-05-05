@@ -13,17 +13,15 @@ struct ContentView: View {
     @ObservedObject var resortStore = ResortStore()
     @State private var addNewResort = false
     @State private var coverDeletedDetail = false
+    @State var selectedID: UUID?
     
     @Environment(\.presentationMode) var presentationMode
-    
-    
-    
+
     var body: some View {
 
         List {
             ForEach(resortStore.resorts) { resort in
                 NavigationLink(destination: ResortView(resort: resort)) {
-                    
                     HStack(spacing: 20) {
                         Image("FlatheadLake1")
                             .resizable()
@@ -44,20 +42,7 @@ struct ContentView: View {
             .onDelete { indexSet in
                 self.removeItems(at: [indexSet.first!])
                 self.coverDeletedDetail.toggle()
-                //self.coverDeletedDetail = true
             }
-
-/*
-             enum Orientation {
-                 case portrait
-                 case landscape
-             }
-             
-             if UIDevice.current.orientation.isLandscape {
-                 self.orientation = .landscape
-             }
-*/
-            
             
             if UIDevice.current.userInterfaceIdiom == .pad {
                 NavigationLink(destination: WelcomeView(), isActive: self.$coverDeletedDetail) {
@@ -66,6 +51,7 @@ struct ContentView: View {
             }
             
         }//list
+        .onAppear(perform: self.selectARow)
         .navigationBarTitle("Resorts")
         .navigationBarItems(leading:
             Button(action: {
@@ -84,6 +70,10 @@ struct ContentView: View {
      
     func removeItems(at offsets: IndexSet) {
         resortStore.resorts.remove(atOffsets: offsets)
+    }
+    
+    func selectARow() {
+        print("selectedID is \(String(describing: self.selectedID))")
     }
 
 }//struct

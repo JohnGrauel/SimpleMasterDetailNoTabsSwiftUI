@@ -14,7 +14,7 @@ class ResortStore: ObservableObject, Identifiable {
     @Published var resorts : [Resort] = []
     
     init() {
-        getResorts(num: 10)
+        getResorts(num: 12)
     }
     
     func getResorts(num: Int) {
