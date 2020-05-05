@@ -36,7 +36,7 @@ class ResortStore: ObservableObject, Identifiable {
     
     
     func getJSONResorts() {
-        
+        //later
         
     }
     

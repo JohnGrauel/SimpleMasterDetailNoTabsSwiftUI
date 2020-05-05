@@ -55,26 +55,5 @@ struct AddNewResort: View {
     }
 }
 
-//struct AddNewResort_Previews: PreviewProvider {
-//    
-//    static var rs = ResortStore()
-//    
-//    @State static var rid = UUID()
-//    static var previews: some View {
-//        AddNewResort(resortStore: rs, selectedResortId: rid)    }
-//}
 
-/*
- 
- let id: String
- let name: String
- let country: String
- let description: String
- let imageCredit: String
- let price: Int
- let size: Int
- let snowDepth: Int
- let elevation: Int
- let runs: Int
- let facilities: [String]
- */
+
