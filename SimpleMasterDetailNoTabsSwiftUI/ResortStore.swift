@@ -11,7 +11,9 @@ import Combine
 
 class ResortStore: ObservableObject, Identifiable {
     
-    @Published var resorts : [Resort] = []
+    //@Published var resorts : [Resort] = []
+    @Published var resorts : [Resort] = [Resort(id: UUID(), name: "Resort Placeholder", country: "USA", description: "Description Placeholder", imageCredit: "my image", price: 5, size: 5, snowDepth: 5, elevation: 5, runs: 5, facilities: ["facilities placeholder"])
+    ]
     
     init() {
         getResorts(num: 12)

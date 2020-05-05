@@ -20,16 +20,7 @@ struct WelcomeView: View {
                 .font(.largeTitle)
             Text("Please select a resort from the left-hand slide in menu")
                 .foregroundColor(.secondary)
-            
-//            Button(action: {
-//                self.presentationMode.wrappedValue.dismiss()
-//            }) {
-//                Text("Dismiss")
-//            }
         }
-
-        .navigationBarTitle(Text("Notifications"), displayMode: .inline)
-
-        
+        .navigationBarTitle(Text("Notifications"), displayMode: .inline)  
     }
 }

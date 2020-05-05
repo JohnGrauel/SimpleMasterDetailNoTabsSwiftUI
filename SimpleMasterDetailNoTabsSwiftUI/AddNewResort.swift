@@ -12,6 +12,9 @@ struct AddNewResort: View {
     
     @ObservedObject var resortStore: ResortStore
     @Environment(\.presentationMode) var presentationMode
+    @Environment(\.horizontalSizeClass) var horizontalSizeClass
+    
+    @Binding var selectedResortId: UUID?
     
     @State private var resortName = ""
     @State private var resortCountry = ""
@@ -39,6 +42,10 @@ struct AddNewResort: View {
 
                 self.resortStore.resorts.append(newResort)
                 self.presentationMode.wrappedValue.dismiss()
+                
+                if self.horizontalSizeClass == .regular {
+                    self.selectedResortId = newResort.id
+                }
             }) {
                 Text("Save Trip")
             }
@@ -48,13 +55,14 @@ struct AddNewResort: View {
     }
 }
 
-struct AddNewResort_Previews: PreviewProvider {
-    
-    static var rs = ResortStore()
-    static var previews: some View {
-        AddNewResort(resortStore: rs)
-    }
-}
+//struct AddNewResort_Previews: PreviewProvider {
+//    
+//    static var rs = ResortStore()
+//    
+//    @State static var rid = UUID()
+//    static var previews: some View {
+//        AddNewResort(resortStore: rs, selectedResortId: rid)    }
+//}
 
 /*
  
